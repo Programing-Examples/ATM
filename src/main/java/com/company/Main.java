@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        short option = 0;
+        short option;
         double currentBalance = 1000;
 
-        while (option != 4) {
+        do {
             System.out.println("\t\t\t\t\t Credit Banco");
             System.out.println("\t************************************************");
             System.out.println("\t* Elija una opcion y presione Enter:           *");
@@ -41,7 +41,7 @@ public class Main {
                 default:
                     System.out.println("Opcion no valida");
             }
-        }
+        } while (option != 4);
 
     }
 }
