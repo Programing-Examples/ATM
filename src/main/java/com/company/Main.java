@@ -19,18 +19,22 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         option = scanner.nextShort();
 
-        if(option == 1) {
-            System.out.println("Saldo: " + currentBalance);
-        }else if(option == 2) {
-            System.out.println("Cuanto desea retirar: ");
-            currentBalance -= scanner.nextDouble();
-            System.out.println("Saldo: " + currentBalance);
-        }else if(option == 3) {
-            System.out.println("Cuanto desea ingresar: ");
-            currentBalance += scanner.nextDouble();
-            System.out.println("Saldo: " + currentBalance);
-        }else {
-            System.out.println("Opcion no valida");
+        switch (option) {
+            case 1:
+                System.out.println("Saldo: " + currentBalance);
+                break;
+            case 2:
+                System.out.println("Cuanto desea retirar: ");
+                currentBalance -= scanner.nextDouble();
+                System.out.println("Saldo: " + currentBalance);
+                break;
+            case 3:
+                System.out.println("Cuanto desea ingresar: ");
+                currentBalance += scanner.nextDouble();
+                System.out.println("Saldo: " + currentBalance);
+                break;
+            default:
+                System.out.println("Opcion no valida");
         }
 
     }
